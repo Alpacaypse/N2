@@ -1,0 +1,37 @@
+QUESTAO 1
+
+import java.util.Scanner;
+
+public class MyClass {
+    public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+
+		// gerador de números aleatorios
+		int numero = 1 + (int)(100
+							* Math.random());
+
+		// Chances iguais a 100
+		int K = 100;
+
+		int i, chute;
+
+		System.out.println("Um número é escolhido entre 0 a 100, chute um número");
+		for (i = 0; i < K; i++) {
+
+			System.out.println("Chute um número");
+		    chute = sc.nextInt();
+
+			// Se o número for acertado
+			if (numero == chute) {
+				System.out.println("Parabéns você acertou o numero.");
+				break;
+			}
+			else if (numero > chute && i != K - 1) {
+				System.out.println("O número é maior que " + chute);
+			}
+			else if (numero < chute && i != K - 1) {
+				System.out.println("O número é menor que " + chute);
+			}
+		}
+}
+}
